@@ -6,19 +6,23 @@
     --medium-brown:hsl(28, 10%, 53%);
     --cream:hsl(27, 66%, 92%);
     --Very-pale-orange:hsl(33, 100%, 98%);
-    --color:#fff;
+    --color-black:#000;
+    --color-white:#fff;
+    --radius:0.938rem;
+
 
 }
 body{
     font-family: "DM Sans",sans-serif; 
     background-color:  var(--cream);
     Font-size: 18px;
-    color: var(--color);
+    color: var(--color-white);
     min-height: 100vh;
    display: flex;
    flex-direction: column;
    justify-content:center ;
    align-items: center;
+   
 
 
 
@@ -35,8 +39,9 @@ body{
 /*css for header*/
     .main__header{
         background-color:hsl(10, 79%, 65%);
-        border-radius: 0.938rem;
+        border-radius: var(--radius);
         padding: 0.938rem;
+        margin-bottom:25px;
 
     }
     .header__content-container{
@@ -67,3 +72,87 @@ body{
 
 
 /*end css for header*/
+/*coding main part*/
+    .main{
+        background-color: var(--Very-pale-orange);
+        color: var(--color-black);
+        border-radius: var(--radius);
+        
+    }
+    .main__container-tag{
+        padding: 25px;
+    }
+    
+    .bars__ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        
+        align-items: center;
+
+    }
+    
+    .bars__ul>li>span{
+        display:inline-block;
+        height: 100px;
+        width: 30px;
+        background-color: var(--soft-red);
+        transition: 0.3s ease;
+    }
+    .bars__ul>li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .small-brown{
+        font-size: 12px;
+        color: var(--medium-brown);
+        
+    }
+    .container_text{
+        margin-bottom: 15px;
+        
+
+    }
+    .container_text>h1{
+        font-weight: 700;
+        color: var(--dark-brown);
+    }
+    .bars__ul>li>span:hover{
+        opacity: 0.75;
+    }
+    .border{
+        margin: 25px 0;
+        background-color: var(--medium-brown);
+        opacity: 0.1;
+        
+    }
+
+
+
+/*end coding main part */
+/*code footer of the page*/
+
+    .result__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+    }
+    .result__container>ul:first-child>li:last-child{
+       font-size: 2rem;
+       font-weight: 700;
+       color: var(--dark-brown);
+    }
+   
+
+
+
+
+
+
+
+
+
+
+/* end footer end of the page*/
