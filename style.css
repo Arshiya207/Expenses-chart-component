@@ -14,17 +14,35 @@ body{
     background-color:  var(--cream);
     Font-size: 18px;
     color: var(--color);
+    min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content:center ;
+   align-items: center;
+
+
+
+}
+
+.main__container{
+    
+    
+    width: 1440px; 
+    
+    margin: auto;
 
 }
 /*css for header*/
     .main__header{
         background-color:hsl(10, 79%, 65%);
-
+        border-radius: 0.938rem;
+        padding: 0.938rem;
 
     }
     .header__content-container{
         display: flex;
         justify-content: space-between;
+
        
 
 
