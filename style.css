@@ -98,7 +98,7 @@ body{
         display: flex;
         justify-content: space-between;
         
-        align-items: center;
+        align-items: flex-end;
 
     }
     
@@ -155,11 +155,11 @@ body{
         justify-content: center;
         font-weight: 400;
         
-        display: none;
-        animation-name:price-effect ;
+        /* display: none;  */
+        /* animation-name:price-effect ;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out; */
 
         
     }
@@ -169,8 +169,24 @@ body{
 
     }
     .bars__ul>li>span:hover+i{
-        display: inline;
+        display: flex;
         
+    }
+    .bars-hover{
+        animation-name:price-effect ;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+    .bars-unhover{
+        animation-name:price-effect-fade ;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+    @keyframes price-effect-fade{
+        from{opacity: 1;transform: translateY(-150%)}
+        to{opacity: 0;transform: translateY(0); display: none;}
     }
     
 
