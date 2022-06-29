@@ -22,6 +22,7 @@ body{
    flex-direction: column;
    justify-content:center ;
    align-items: center;
+   flex-wrap: wrap;
    
 
 
@@ -30,10 +31,12 @@ body{
 
 .main__container{
     
-    
-    width: 1440px; 
+    width: 377px; 
+   
     
     margin: auto;
+   
+
 
 }
 /*css for header*/
@@ -67,8 +70,15 @@ body{
         font-size:0.813rem;
 
     }
+    .content_container-imgHolder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content_container-imgHolder>img{
+        width: 75%;
 
-
+    }
 
 
 /*end css for header*/
@@ -95,14 +105,16 @@ body{
     .bars__ul>li>span{
         display:inline-block;
         height: 100px;
-        width: 30px;
+        width: 37px;
         background-color: var(--soft-red);
         transition: 0.3s ease;
+        border-radius: 6px;
     }
     .bars__ul>li{
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
     .small-brown{
         font-size: 12px;
@@ -110,16 +122,19 @@ body{
         
     }
     .container_text{
-        margin-bottom: 15px;
+        margin-bottom: 40px;
+        
         
 
     }
     .container_text>h1{
         font-weight: 700;
         color: var(--dark-brown);
+        font-size: 1.5rem;
     }
     .bars__ul>li>span:hover{
         opacity: 0.75;
+
     }
     .border{
         margin: 25px 0;
@@ -127,6 +142,37 @@ body{
         opacity: 0.1;
         
     }
+    .bars__ul>li>i{
+        position: absolute;
+        background-color: var(--dark-brown);
+        border-radius: 5px;
+        color: white;
+        padding: .2rem;
+        font-size: 12px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        
+        display: none;
+        animation-name:price-effect ;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+        
+    }
+    @keyframes price-effect{
+        from{opacity: 0;transform: translateY(0);}
+        to{opacity: 1;transform: translateY(-150%);}
+
+    }
+    .bars__ul>li>span:hover+i{
+        display: inline;
+        
+    }
+    
 
 
 
@@ -140,14 +186,22 @@ body{
 
     }
     .result__container>ul:first-child>li:last-child{
-       font-size: 2rem;
+       font-size: 2.1rem;
        font-weight: 700;
        color: var(--dark-brown);
     }
    
+    .result__container>ul:last-child>li:first-child{
+        color: var(--dark-brown);
+        font-weight: 400;
+        font-size: 16px;
+
+       
+    }
+   
 
 
-
+    
 
 
 
@@ -156,3 +210,10 @@ body{
 
 
 /* end footer end of the page*/
+@media (max-width:377px) {
+    .main__container{
+        width: 340px;
+
+    }
+    
+}
