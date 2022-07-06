@@ -153,15 +153,15 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 400;
-        
-        
-
+        font-weight: 400; 
+        user-select: none;
+        pointer-events: none;  
         
     }
     @keyframes price-effect{
-        from{opacity: 0;transform: translateY(0);}
-        to{opacity: 1;transform: translateY(-150%);}
+        0%{opacity: 0;transform: translateY(0); display: none;}
+        80%{display: flex;}
+        100%{opacity: 1;transform: translateY(-150%); }
 
     }
     .bars__ul>li>span:hover+i{
@@ -179,6 +179,7 @@ body{
         animation-duration: 0.2s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
+        
     }
     @keyframes price-effect-fade{
         from{opacity: 1;transform: translateY(-150%)}
